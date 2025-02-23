@@ -11,12 +11,13 @@ class Calculator:
         return a * b
 
     def divide(self, a, b):
+        """Performs division and prevents division by zero."""
         if b == 0:
             raise ValueError("Cannot divide by zero.")
         return a / b
 
-    # Square Root Function
     def square_root(self, x):
+        """Returns the square root of a number, ensuring it's non-negative."""
         if x < 0:
             raise ValueError("Cannot calculate the square root of a negative number.")
         return math.sqrt(x)
@@ -30,7 +31,12 @@ if __name__ == "__main__":
     print(f"{num1} + {num2} = {calculator.add(num1, num2)}")
     print(f"{num1} - {num2} = {calculator.subtract(num1, num2)}")
     print(f"{num1} * {num2} = {calculator.multiply(num1, num2)}")
-    print(f"{num1} / {num2} = {calculator.divide(num1, num2)}")
+    
+    try:
+        print(f"{num1} / {num2} = {calculator.divide(num1, num2)}")
+        print(f"10 / 0 = {calculator.divide(10, 0)}")  # This will raise an exception
+    except ValueError as e:
+        print(e)
 
     # Testing Square Root Function
     num3 = 25
