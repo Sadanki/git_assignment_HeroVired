@@ -38,11 +38,11 @@ if __name__ == "__main__":
     except ValueError as e:
         print(e)
 
-    # Testing Square Root Function
+    # Testing Square Root Function1
     num3 = 25
     print(f"The square root of {num3} = {calculator.square_root(num3)}")
     
-    # Testing Square Root Function
+    # Testing Square Root Function2
     num4 = 36
     print(f"The square root of {num4} = {calculator.square_root(num4)}")
     
