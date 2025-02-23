@@ -41,7 +41,11 @@ if __name__ == "__main__":
     # Testing Square Root Function
     num3 = 25
     print(f"The square root of {num3} = {calculator.square_root(num3)}")
-
+    
+    # Testing Square Root Function
+    num4 = 36
+    print(f"The square root of {num4} = {calculator.square_root(num4)}")
+    
     # Handling negative square root case
     try:
         num4 = -9
